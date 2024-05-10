@@ -1,13 +1,12 @@
-from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
+from django.contrib import auth, messages
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse
 
-from users.forms import UserLoginForm, UserRegistrationForm, ProfileForm
+from users.forms import ProfileForm, UserLoginForm, UserRegistrationForm
 
 
-# Create your views here.
 def login(request):
     if request.method == 'POST':
         form = UserLoginForm(data=request.POST)
@@ -26,6 +25,7 @@ def login(request):
                 return HttpResponseRedirect(reverse('main:index'))
     else:
         form = UserLoginForm()
+
     context = {
         'title': 'Home - Авторизация',
         'form': form
@@ -44,6 +44,7 @@ def registration(request):
             return HttpResponseRedirect(reverse('main:index'))
     else:
         form = UserRegistrationForm()
+
     context = {
         'title': 'Home - Регистрация',
         'form': form
@@ -61,6 +62,7 @@ def profile(request):
             return HttpResponseRedirect(reverse('user:profile'))
     else:
         form = ProfileForm(instance=request.user)
+
     context = {
         'title': 'Home - Кабинет',
         'form': form
@@ -74,6 +76,6 @@ def users_cart(request):
 
 @login_required
 def logout(request):
-    messages.success(request, f"{request.user.username}, Вы вы вышли из аккаунта")
+    messages.success(request, f"{request.user.username}, Вы вышли из аккаунта")
     auth.logout(request)
     return redirect(reverse('main:index'))
