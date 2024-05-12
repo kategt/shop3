@@ -67,7 +67,7 @@ $(document).ready(function () {
     //     var cart_id = $(this).data("cart-id");
     //     // Из атрибута href берем ссылку на контроллер django
     //     var remove_from_cart = $(this).attr("href");
-    
+
     //     // делаем post запрос через ajax не перезагружая страницу
     //     $.ajax({
 
@@ -105,14 +105,14 @@ $(document).ready(function () {
 
 
 
-    // // Теперь + - количества товара 
+    // // Теперь + - количества товара
     // // Обработчик события для уменьшения значения
     // $(document).on("click", ".decrement", function () {
     //     // Берем ссылку на контроллер django из атрибута data-cart-change-url
     //     var url = $(this).data("cart-change-url");
     //     // Берем id корзины из атрибута data-cart-id
     //     var cartID = $(this).data("cart-id");
-    //     // Ищем ближайшеий input с количеством 
+    //     // Ищем ближайшеий input с количеством
     //     var $input = $(this).closest('.input-group').find('.number');
     //     // Берем значение количества товара
     //     var currentValue = parseInt($input.val());
@@ -131,7 +131,7 @@ $(document).ready(function () {
     //     var url = $(this).data("cart-change-url");
     //     // Берем id корзины из атрибута data-cart-id
     //     var cartID = $(this).data("cart-id");
-    //     // Ищем ближайшеий input с количеством 
+    //     // Ищем ближайшеий input с количеством
     //     var $input = $(this).closest('.input-group').find('.number');
     //     // Берем значение количества товара
     //     var currentValue = parseInt($input.val());
@@ -152,7 +152,7 @@ $(document).ready(function () {
     //             quantity: quantity,
     //             csrfmiddlewaretoken: $("[name=csrfmiddlewaretoken]").val(),
     //         },
- 
+
     //         success: function (data) {
     //              // Сообщение
     //             successMessage.html(data.message);
@@ -161,7 +161,7 @@ $(document).ready(function () {
     //             setTimeout(function () {
     //                  successMessage.fadeOut(400);
     //             }, 7000);
- 
+
     //             // Изменяем количество товаров в корзине
     //             var goodsInCartCount = $("#goods-in-cart-count");
     //             var cartCount = parseInt(goodsInCartCount.text() || 0);
@@ -179,7 +179,7 @@ $(document).ready(function () {
     //     });
     // }
 
-     // Берем из разметки элемент по id - оповещения от django
+    // Берем из разметки элемент по id - оповещения от django
     var notification = $('#notification');
     // И через 7 сек. убираем
     if (notification.length > 0) {
@@ -201,7 +201,7 @@ $(document).ready(function () {
     });
 
     // Обработчик события радиокнопки выбора способа доставки
-    $("input[name='requires_delivery']").change(function() {
+    $("input[name='requires_delivery']").change(function () {
         var selectedValue = $(this).val();
         // Скрываем или отображаем input ввода адреса доставки
         if (selectedValue === "1") {
@@ -210,5 +210,4 @@ $(document).ready(function () {
             $("#deliveryAddressField").hide();
         }
     });
-
 });
