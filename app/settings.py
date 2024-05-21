@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    'app.middleware.DisableBrowserCachingMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
