@@ -85,7 +85,7 @@
                             {% if product.bodyline %}
                             {{product.bodyline|truncatechars:100}}
                             {% else %}
-                            {{ product.description|truncatechars:35 }}
+                            {{ product.description|truncatechars:50 }}
                             {% endif %}
                         {% endautoescape %}
                     </p>
