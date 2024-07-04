@@ -58,4 +58,4 @@ User management.
 Files: models.py, views.py, urls.py, forms.py, templates.
 Usage
 This project can be deployed to create a fully functional online store. Users can register, add products to their cart, and make purchases. Administrators can manage products and users through the Django admin panel.
-you can easily launch and modify your own copy
+You can easily launch and modify your own copy
