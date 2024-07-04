@@ -1,3 +1,7 @@
+a sample e-commerce shopping site
+pattern for a real-life shopping cart and store checkout flow
+you can easily launch and modify your own copy
+
 All icons are taken from Font Awesome (http://fontawesome.io/) project.
 The Font Awesome font is licensed under the SIL OFL 1.1:
 - https://scripts.sil.org/OFL
